@@ -1,0 +1,263 @@
+.app {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 60px;
+}
+
+.topBar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.topBar h1 {
+  margin: 0;
+  font-size: 32px;
+}
+
+.topBar p {
+  margin: 0;
+  color: #64748b;
+}
+
+.layout {
+  margin-top: 16px;
+  display: grid;
+  gap: 16px;
+  grid-template-columns: 0.9fr 1.4fr 1fr;
+}
+
+.panel {
+  border: none;
+  border-radius: 12px;
+  padding: 20px;
+  background: #ffffff;
+}
+
+.panel h2,
+.panel h3,
+.panel h4 {
+  margin: 0 0 20px;
+  font-size: 18px;
+}
+
+.resourcePanel,
+.exportPanel,
+.corePanel {
+  align-self: start;
+  min-height: 700px;
+}
+
+.subBlock, .uploadSection, .textInputSection, .resourceSelectSection {
+  border: 1px solid #e2e8f0;
+  border-radius: 10px;
+  padding: 10px;
+  margin-bottom: 10px;
+  background: #fcfdff;
+}
+
+label {
+  display: block;
+  font-size: 13px;
+  margin-bottom: 8px;
+}
+
+input[type="file"] {
+  color: #94a3b8;
+  font-size: 12px;
+}
+
+input, select, button {
+  width: 100%;
+  box-sizing: border-box;
+  margin-top: 4px;
+  padding: 8px;
+  border-radius: 8px;
+  border: 1px solid #c9d3e0;
+}
+
+input::placeholder {
+  color: #94a3b8;
+  font-size: 12px;
+}
+
+button {
+  cursor: pointer;
+  background: #0f172a;
+  color: #ffffff;
+}
+
+.buttons {
+  display: grid;
+  gap: 8px;
+  margin-top: 8px;
+}
+
+.grid2 {
+  display: grid;
+  gap: 8px;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.presetItem {
+  border: 1px solid #d9e2ef;
+  border-radius: 8px;
+  padding: 8px;
+  background: #f8fbff;
+}
+
+.presetItem strong {
+  display: block;
+  font-size: 12px;
+  color: #334155;
+  margin-bottom: 4px;
+}
+
+.presetItem span {
+  font-size: 13px;
+  color: #0f172a;
+}
+
+.muted {
+  color: #667085;
+  font-size: 12px;
+  margin: 6px 0;
+}
+
+.safeAreaBox {
+  margin-top: 10px;
+  border: 1px dashed #91a4c1;
+  border-radius: 8px;
+  padding: 8px;
+}
+
+.previewPanel {
+  display: flex;
+  flex-direction: column;
+}
+
+.preview {
+  width: 100%;
+  border-radius: 12px;
+  border: 1px solid #d0d7e2;
+  position: relative;
+  overflow: hidden;
+  background: #0f172a;
+}
+
+.previewSmall .preview {
+  max-width: 360px;
+}
+
+.preview img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.previewCanvas {
+  width: 100%;
+  height: 100%;
+  display: block;
+  cursor: grab;
+}
+
+.previewCanvas:active {
+  cursor: grabbing;
+}
+
+.safeArea {
+  position: absolute;
+  border: none;
+  color: white;
+  padding: 0;
+  overflow: hidden;
+}
+
+.safeAreaMask {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 54%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    rgba(0, 0, 0, 0.78) 0%,
+    rgba(0, 0, 0, 0.42) 60%,
+    rgba(0, 0, 0, 0) 100%
+  );
+}
+
+.safeAreaContent {
+  position: relative;
+  padding: 24px 20px;
+}
+
+.safeAreaContent > div:first-child {
+  font-family: 'GEELY Design', 'PingFang SC', sans-serif;
+  font-size: 18px;
+  line-height: 1.2;
+  margin-bottom: 12px;
+}
+
+.safeAreaContent small {
+  display: inline-block;
+  font-family: 'PingFang SC', sans-serif;
+  font-size: 13px;
+  line-height: 1;
+}
+
+.fixedAction {
+  width: 16px;
+  height: 16px;
+  margin-top: -15px;
+  margin-left: 56px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.fixedAction span {
+  width: 7px;
+  height: 7px;
+  border-top: 1.5px solid #ffffff;
+  border-right: 1.5px solid #ffffff;
+  transform: rotate(45deg);
+  display: block;
+}
+
+.status {
+  margin-top: 8px;
+  font-size: 12px;
+  color: #0f172a;
+}
+
+.reminder {
+  margin-top: 12px;
+  padding: 10px;
+  border-radius: 10px;
+  background: #fff7ed;
+  border: 1px solid #fed7aa;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.reminder button {
+  width: auto;
+  white-space: nowrap;
+}
+
+@media (max-width: 1120px) {
+  .app {
+    padding: 20px;
+  }
+  
+  .layout {
+    grid-template-columns: 1fr;
+  }
+
+  .previewSmall .preview {
+    max-width: none;
+  }
+}
